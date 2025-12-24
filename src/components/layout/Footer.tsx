@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { GraduationCap, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import { Container } from "@/components/ui/Container";
+import { GraduationCap, Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   program: [
@@ -14,72 +11,42 @@ const footerLinks = {
     { name: "Bahasa Prancis", href: "/program/prancis" },
   ],
   informasi: [
-    { name: "Tentang Kami", href: "/tentang" },
+    { name: "Tentang Kami", href: "#" },
     { name: "Jadwal Kelas", href: "/jadwal" },
     { name: "Pengajar", href: "/pengajar" },
     { name: "Testimoni", href: "/testimoni" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Blog", href: "/blog" },
-  ],
-  kontak: [
-    { icon: Phone, text: "+62 21 1234 5678", href: "tel:+622112345678" },
-    { icon: Mail, text: "info@linguamaster.id", href: "mailto:info@linguamaster.id" },
-    { icon: MapPin, text: "Jl. Pendidikan No. 123, Jakarta Selatan", href: "#" },
+    { name: "FAQ", href: "#" },
   ],
 };
 
-const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/linguamaster", label: "Facebook" },
-  { icon: Instagram, href: "https://instagram.com/linguamaster", label: "Instagram" },
-  { icon: Twitter, href: "https://twitter.com/linguamaster", label: "Twitter" },
-  { icon: Youtube, href: "https://youtube.com/linguamaster", label: "Youtube" },
-];
-
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-[#1F2937] text-white">
-      <Container className="py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-dark text-white">
+      <div className="container-custom py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-[#4F46E5] rounded-xl flex items-center justify-center">
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="font-bold text-xl font-heading">LinguaMaster</span>
+                <span className="font-heading font-bold text-lg">LinguaMaster</span>
                 <span className="block text-xs text-gray-400">Academy</span>
               </div>
             </Link>
-            <p className="text-gray-400 mb-6">
-              Kuasai Dunia dengan Bahasa. Tempat terbaik untuk belajar bahasa asing dengan pengajar berpengalaman dan metode pembelajaran interaktif.
+            <p className="text-gray-400 text-sm mb-4">
+              Kuasai Dunia dengan Bahasa. Tempat terbaik untuk belajar bahasa asing dengan pengajar berpengalaman.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#4F46E5] transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Program */}
           <div>
-            <h3 className="font-bold text-lg mb-6 font-heading">Program Bahasa</h3>
-            <ul className="space-y-3">
+            <h3 className="font-heading font-bold mb-4">Program Bahasa</h3>
+            <ul className="space-y-2">
               {footerLinks.program.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -89,14 +56,11 @@ export function Footer() {
 
           {/* Informasi */}
           <div>
-            <h3 className="font-bold text-lg mb-6 font-heading">Informasi</h3>
-            <ul className="space-y-3">
+            <h3 className="font-heading font-bold mb-4">Informasi</h3>
+            <ul className="space-y-2">
               {footerLinks.informasi.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -106,44 +70,43 @@ export function Footer() {
 
           {/* Kontak */}
           <div>
-            <h3 className="font-bold text-lg mb-6 font-heading">Kontak</h3>
-            <ul className="space-y-4">
-              {footerLinks.kontak.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.href}
-                    className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors"
-                  >
-                    <item.icon className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                    <span>{item.text}</span>
-                  </a>
-                </li>
-              ))}
+            <h3 className="font-heading font-bold mb-4">Kontak</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-gray-400 text-sm">
+                <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>+62 21 1234 5678</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400 text-sm">
+                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>info@linguamaster.id</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>Jl. Pendidikan No. 123, Jakarta Selatan</span>
+              </li>
             </ul>
           </div>
         </div>
-      </Container>
+      </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-white/10">
-        <Container className="py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © 2025 LinguaMaster Academy. All rights reserved.
-            </p>
-            <p className="text-gray-400 text-sm text-center md:text-right">
+      <div className="border-t border-gray-800">
+        <div className="container-custom py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+            <p>&copy; 2025 LinguaMaster Academy. All rights reserved.</p>
+            <p>
               Website ini dibuat dengan ❤️ oleh{" "}
               <a
                 href="https://creativism.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#4F46E5] hover:text-[#10B981] transition-colors font-medium"
+                className="text-primary hover:text-primary-light transition-colors"
               >
                 Creativism Digital Marketing Agency
               </a>
             </p>
           </div>
-        </Container>
+        </div>
       </div>
     </footer>
   );
