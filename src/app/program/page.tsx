@@ -95,6 +95,224 @@ export default function ProgramPage() {
           </div>
         </div>
       </section>
+
+      {/* Class Types */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-dark mb-4">
+              Pilih Tipe Kelas yang Sesuai
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Kami menyediakan berbagai tipe kelas untuk memenuhi kebutuhan belajar Anda
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card text-center hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+                <Users className="w-10 h-10 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-dark mb-2">Kelas Reguler</h3>
+              <p className="text-primary font-bold text-2xl mb-4">Rp 400.000 - 700.000<span className="text-sm font-normal text-gray-500">/bulan</span></p>
+              <ul className="text-left space-y-3 mb-6">
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  8-12 siswa per kelas
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  2x pertemuan per minggu
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  90 menit per sesi
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Materi pembelajaran termasuk
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Sertifikat kelulusan
+                </li>
+              </ul>
+              <Link href="/pendaftaran" className="btn-primary w-full">Daftar Sekarang</Link>
+            </div>
+
+            <div className="card text-center hover:shadow-xl transition-shadow border-2 border-primary relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full">POPULER</span>
+              <div className="w-20 h-20 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center">
+                <Award className="w-10 h-10 text-secondary" />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-dark mb-2">Kelas Privat</h3>
+              <p className="text-primary font-bold text-2xl mb-4">Rp 1.500.000+<span className="text-sm font-normal text-gray-500">/bulan</span></p>
+              <ul className="text-left space-y-3 mb-6">
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  1-3 siswa per kelas
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Jadwal fleksibel
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Materi custom sesuai kebutuhan
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Progress report bulanan
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Konsultasi gratis
+                </li>
+              </ul>
+              <Link href="/pendaftaran" className="btn-primary w-full">Daftar Sekarang</Link>
+            </div>
+
+            <div className="card text-center hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center">
+                <BookOpen className="w-10 h-10 text-accent" />
+              </div>
+              <h3 className="text-xl font-heading font-bold text-dark mb-2">Kelas Online</h3>
+              <p className="text-primary font-bold text-2xl mb-4">Rp 350.000 - 600.000<span className="text-sm font-normal text-gray-500">/bulan</span></p>
+              <ul className="text-left space-y-3 mb-6">
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  5-10 siswa per kelas
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Belajar dari mana saja
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  60 menit via Zoom
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Rekaman kelas tersedia
+                </li>
+                <li className="flex items-start gap-2 text-gray-600 text-sm">
+                  <span className="w-5 h-5 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                  Materi digital
+                </li>
+              </ul>
+              <Link href="/pendaftaran" className="btn-primary w-full">Daftar Sekarang</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Path */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-dark mb-4">
+              Jalur Pembelajaran
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Dari pemula hingga mahir, kami memandu perjalanan belajar Anda
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20"></div>
+
+              <div className="space-y-8">
+                <div className="relative flex gap-6">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 z-10">1</div>
+                  <div className="card flex-1">
+                    <h3 className="text-lg font-heading font-bold text-dark mb-2">Level Beginner</h3>
+                    <p className="text-gray-600 text-sm mb-3">Durasi: 3-4 bulan</p>
+                    <p className="text-gray-600">Mempelajari dasar-dasar bahasa: alfabet, pengucapan, kosakata dasar, dan percakapan sederhana sehari-hari.</p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-6">
+                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 z-10">2</div>
+                  <div className="card flex-1">
+                    <h3 className="text-lg font-heading font-bold text-dark mb-2">Level Elementary</h3>
+                    <p className="text-gray-600 text-sm mb-3">Durasi: 3-4 bulan</p>
+                    <p className="text-gray-600">Memperdalam tata bahasa, memperluas kosakata, dan meningkatkan kemampuan berbicara dalam situasi umum.</p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-6">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 z-10">3</div>
+                  <div className="card flex-1">
+                    <h3 className="text-lg font-heading font-bold text-dark mb-2">Level Intermediate</h3>
+                    <p className="text-gray-600 text-sm mb-3">Durasi: 4-6 bulan</p>
+                    <p className="text-gray-600">Mampu berkomunikasi dengan lancar, memahami teks kompleks, dan menulis dengan struktur yang baik.</p>
+                  </div>
+                </div>
+
+                <div className="relative flex gap-6">
+                  <div className="w-16 h-16 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 z-10">4</div>
+                  <div className="card flex-1">
+                    <h3 className="text-lg font-heading font-bold text-dark mb-2">Level Advanced</h3>
+                    <p className="text-gray-600 text-sm mb-3">Durasi: 6+ bulan</p>
+                    <p className="text-gray-600">Menguasai bahasa secara menyeluruh, siap untuk ujian sertifikasi internasional dan penggunaan profesional.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-dark mb-4">
+              Mengapa Belajar di LinguaMaster?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: "🎓", title: "Pengajar Bersertifikat", desc: "Native speaker & pengajar lokal dengan sertifikasi internasional" },
+              { icon: "📚", title: "Kurikulum Terstruktur", desc: "Materi pembelajaran sistematis dari dasar hingga mahir" },
+              { icon: "🏆", title: "Persiapan Ujian", desc: "Program khusus untuk IELTS, JLPT, TOPIK, HSK, dan lainnya" },
+              { icon: "💬", title: "Praktik Intensif", desc: "70% waktu kelas untuk praktik speaking dan conversation" },
+              { icon: "📱", title: "Akses Digital", desc: "Platform e-learning dengan materi tambahan 24/7" },
+              { icon: "👥", title: "Kelas Kecil", desc: "Maksimal 12 siswa untuk perhatian optimal" },
+              { icon: "📝", title: "Progress Report", desc: "Laporan kemajuan berkala untuk monitoring perkembangan" },
+              { icon: "🎁", title: "Bonus & Diskon", desc: "Promo menarik untuk pendaftaran paket" },
+            ].map((item, i) => (
+              <div key={i} className="card text-center hover:shadow-lg transition-shadow">
+                <span className="text-4xl mb-4 block">{item.icon}</span>
+                <h3 className="font-heading font-bold text-dark mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gradient-to-br from-primary to-secondary">
+        <div className="container-custom text-center">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
+            Siap Memulai Perjalanan Bahasa Anda?
+          </h2>
+          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+            Dapatkan konsultasi gratis dan tes level untuk menentukan kelas yang tepat
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/pendaftaran" className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors">
+              Daftar Sekarang <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link href="/jadwal" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold px-8 py-4 rounded-lg transition-colors">
+              Lihat Jadwal Kelas
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
